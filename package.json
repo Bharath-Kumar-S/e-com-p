@@ -1,0 +1,23 @@
+{
+  "name": "ecomm_api",
+  "version": "1.0.0",
+  "description": "eCommerce_API",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node be/server.js",
+    "server": "nodemon be/server.js",
+    "client": "npm start --prefix fe",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "Bharath",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "dotenv": "^16.1.4",
+    "nodemon": "^2.0.22"
+  }
+}
