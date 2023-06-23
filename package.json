@@ -8,11 +8,15 @@
     "start": "node be/server.js",
     "server": "nodemon be/server.js",
     "client": "npm start --prefix fe",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node be/seeder.js",
+    "data:destroy": "node be/seeder.js -d"
   },
   "author": "Bharath",
   "license": "MIT",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "mongoose": "^7.3.1"
