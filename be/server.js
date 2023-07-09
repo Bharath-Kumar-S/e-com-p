@@ -12,14 +12,19 @@ const port = process.env.PORT || 5000;
 
 connectDB();
 const app = express();
-app.use(cors());
+//Cookie parser middleware
+app.use(cookieParser());
+
+app.use(
+  cors({
+    credentials: true,
+    origin: "http://localhost:3000",
+  })
+);
 
 //Body parser middleware
 app.use(json());
 app.use(express.urlencoded({ extended: true }));
-
-//Cookie parser middleware
-app.use(cookieParser());
 
 app.get("/", (req, res) => {
   res.send("API is running...........");
